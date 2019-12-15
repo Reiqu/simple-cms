@@ -1,0 +1,16 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+    <form action="/create" method="post" accept-charset="UTF-8">
+        <h2>Add a new page</h2>
+        <label for="title">page name</label>
+        <input placeholder="title" id="title" type="text" name="title">
+        <label for="description">description</label>
+        <input placeholder="description" id="description" type="text" name="description">
+            
+        <label for="htmlfile">html file</label>
+        <input id="htmlfile" type="file" name="htmlfile">
+        <br>
+        <input type="submit" value="Add">
+    </form>
+{% endblock %}

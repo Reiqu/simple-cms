@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <meta charset="utf-8">  
+    <link rel='stylesheet' href='stylesheets/style.css' />
+    <script src="javascripts/darkmode.js"></script>
+    <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body onload="checkTheme2()">
+    <header>
+      <ul>
+        <li><a href="/dash"><i class="im im-dashboard"></i> Dashboard</a></li>
+        <li><a href="/add"><i class="im im-plus-circle"></i> Add</a></li>
+        <li><a href="/manage"><i class="im im-pencil"></i> Manage</a></li>
+
+        <li class="right"><a id="toggletheme" onclick="toggleDarkTheme()" id="toggletheme"><i class="im im-light-bulb"></i></a></li>
+        <li class="right"><a href="/user"><i class="im im-user-settings"></i> User</a></li>
+      </ul>
+    </header>
+    <main>
+    {% block body %}{% endblock %}
+    </main>
+  </body>
+</html>
