@@ -11,4 +11,5 @@ function savePage(data) {
     localStorage.setItem(title + "-title", title);
     localStorage.setItem(title + "-subtitle", subtitle);
     localStorage.setItem(title + "-content", content);
+    return console.log("Added to localstorage")
 }
