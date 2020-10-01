@@ -15,8 +15,16 @@ function savePage(data) {
 }
 function getPage(title) {
     let data = [];
+    console.log(localStorage.length);
     for (let index = 0; index < localStorage.length;index++) {
-        let title = localStorage.key(0);
-        console.log(title);
+        let title = localStorage.getItem(localStorage.key(index++));
+        let subtitle = localStorage.getItem(localStorage.key(index++));
+        let content = localStorage.getItem(localStorage.key(index));
+        data.push({
+            title,
+            subtitle,
+            content
+        })
     }
+    return data;
 }
