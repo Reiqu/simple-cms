@@ -13,10 +13,18 @@ function savePage(data) {
     localStorage.setItem(title + "-content", content);
     return console.log("Added to localstorage");
 }
-function getPage(title) {
+function getPages() {
     let data = [];
     for (let index = 0; index < localStorage.length;index++) {
-        let title = localStorage.key(0);
-        console.log(title);
+        let title = localStorage.getItem(localStorage.key(index++));
+        let subtitle = localStorage.getItem(localStorage.key(index++));
+        let content = localStorage.getItem(localStorage.key(index));
+        data.push({
+            title,
+            subtitle,
+            content
+        })
     }
+    console.log(data);
+    return data;
 }
